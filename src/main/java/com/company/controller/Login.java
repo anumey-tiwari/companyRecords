@@ -39,7 +39,7 @@ public class Login extends HttpServlet {
             ArrayList<Members> memeberList = memberDao.getMembers();
             
             request.setAttribute("memberList", memeberList);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("companyDetails.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/companyDetails.jsp");
             requestDispatcher.forward(request, response);
         }else{
             response.sendRedirect("login.jsp");
